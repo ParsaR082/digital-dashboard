@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+@import "tailwindcss";
+
+:root {
+  --bg-canvas: #0f131d;
+  --bg-surface: #0f131d;
+  --bg-surface-low: #171b26;
+  --bg-surface-container: #1c1f2a;
+  --bg-surface-high: #262a35;
+  --bg-surface-highest: #313540;
+  --bg-surface-lowest: #0a0e18;
+  
+  --color-primary: #c3c0ff;
+  --color-primary-container: #4f46e5;
+  --color-on-primary-container: #dad7ff;
+  --color-secondary: #4cd7f6;
+  --color-secondary-container: #03b5d3;
+  --color-tertiary: #4edea3;
+  --color-tertiary-container: #006e4b;
+  --color-on-surface: #dfe2f1;
+  --color-on-surface-variant: #c7c4d8;
+  --color-outline: #918fa1;
+  --color-outline-variant: #464555;
+  --color-error: #ffb4ab;
+}
+
+@theme {
+  --color-surface-dim: #0f131d;
+  --color-surface: #0f131d;
+  --color-surface-bright: #353944;
+  --color-surface-container-lowest: #0a0e18;
+  --color-surface-container-low: #171b26;
+  --color-surface-container: #1c1f2a;
+  --color-surface-container-high: #262a35;
+  --color-surface-container-highest: #313540;
+  --color-surface-variant: #313540;
+  --color-background: #0f131d;
+
+  --color-on-surface: #dfe2f1;
+  --color-on-surface-variant: #c7c4d8;
+  --color-outline: #918fa1;
+  --color-outline-variant: #464555;
+
+  --color-primary: #c3c0ff;
+  --color-primary-container: #4f46e5;
+  --color-on-primary-container: #dad7ff;
+  --color-primary-fixed: #e2dfff;
+  --color-primary-fixed-dim: #c3c0ff;
+
+  --color-secondary: #4cd7f6;
+  --color-secondary-container: #03b5d3;
+  --color-on-secondary: #003640;
+  --color-on-secondary-container: #00424e;
+
+  --color-tertiary: #4edea3;
+  --color-tertiary-container: #006e4b;
+  --color-on-tertiary-container: #67f4b7;
+
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-vazirmatn: 'Vazirmatn', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+html {
+  background-color: #0f131d;
+  color: #dfe2f1;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0f131d;
+  color: #dfe2f1;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Material Symbols font icon sizing and centering */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined' !important;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle clean scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 19, 29, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: #313540;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #464555;
+}
+
+/* RTL Specific font handling */
+html[dir="rtl"] {
+  font-family: 'Vazirmatn', 'Plus Jakarta Sans', sans-serif;
+}
+
+html[dir="ltr"] {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-mono-numeric {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background-color: rgba(28, 31, 42, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-card {
+  background-color: rgba(23, 27, 38, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
